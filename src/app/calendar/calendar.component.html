@@ -190,26 +190,31 @@
                 <div class="card h-100" style="margin-top: 10px; margin-left: -5px; margin-right: -5px">
                     <div class="media">
                         
-                        <img src="assets/images/enci.png"   width="30%" class="mr-3" alt="Enci"   *ngIf="event.type==1">
-                        <img src="assets/images/csen.png"   width="30%" class="mr-3" alt="Csen"   *ngIf="event.type==2">
-                        <img src="assets/images/master.png" width="30%" class="mr-3" alt="Fisc"   *ngIf="event.type==3">
-                        <img src="assets/images/fidasc.png" width="30%" class="mr-3" alt="Fidasc" *ngIf="event.type==4">
-                        <img src="assets/images/fisc.png"   width="30%" class="mr-3" alt="Fisc"   *ngIf="event.type==5">
+                        <img src="assets/images/enci.png"   width="30%" class="mr-2 ml-1 mt-1" alt="Enci"   *ngIf="event.type==1">
+                        <img src="assets/images/csen.png"   width="30%" class="mr-2 ml-1 mt-1" alt="Csen"   *ngIf="event.type==2">
+                        <img src="assets/images/master.png" width="30%" class="mr-2 ml-1 mt-1" alt="Fisc"   *ngIf="event.type==3">
+                        <img src="assets/images/fidasc.png" width="30%" class="mr-2 ml-1 mt-1" alt="Fidasc" *ngIf="event.type==4">
+                        <img src="assets/images/fisc.png"   width="30%" class="mr-2 ml-1 mt-1" alt="Fisc"   *ngIf="event.type==5">
                         
                         <div class="media-body">
-                            <h5 class="mt-0">{{event.date}} 2019</h5>
+                            <!--<h5 class="mt-0">{{event.date}} 2019</h5>-->
+                            <h5 style="margin-top: 5px;">
+                                <span>{{event.date_start}}</span>
+                                <br>
+                                <span>{{event.date_end}}</span>
+                            </h5>
                         </div>
                     </div>
                              
                     <hr>
     
-                    <img class="card-img-top img-fluid" src="assets/images/empty_a4.jpg" alt="Card image cap" *ngIf="event.posters==0">
+                    <img class="card-img-top img-fluid" src="assets/images/locandina.jpg" alt="Card image cap" *ngIf="event.posters==0">
                     <img class="card-img-top img-fluid" src="{{event.poster}}"           alt="Card image cap" *ngIf="event.posters!=0">
     
                     <div class="card-body">
                         <h4 class="card-title">{{event.structure}}</h4>
                         <p>{{event.city}}&nbsp;({{event.zone}})</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        <!--<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>-->
                     </div>
                     
                 </div>
