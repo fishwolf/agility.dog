@@ -1,0 +1,69 @@
+<section class="text-center text-light jumbotron mb-0 mt-5 parallax bg-virtualCup rounded-0">
+
+    <div class="container">
+        <div class="row justify-content-md-center ">
+            <div class="col-sm-8 text-center text-white">
+                <h3 class="my-3 text-white skp-title wow zoomIn font-weight-bold display-4" data-wow-delay="0.3s">
+                    Iscriviti e divertiti<br />
+                    con la VIRTUAL CUP!
+                </h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris lorem mauris, imperdiet ut eros eget, facilisis vehicula dui.
+                    Vivamus accumsan scelerisque ornare.
+                </p>
+                <div class="row justify-content-md-center mt-5">
+                    <div class="col-sm-12 text-center">
+
+                        <form class="form-signin">
+                            
+                            <!-- ORIGINAL BOOSTRAP
+                            <div class="form-group">
+                                <input type="email" class="form-control form-control-lg rounded-0 border-0" id="exampleInputEmail1" placeholder="Email" >
+                            </div>
+                            
+                            <div class="form-group">
+                                <input type="text" class="form-control form-control-lg rounded-0 border-0" id="exampleInputPassword1" placeholder="Binomio">
+                            </div>
+                            -->
+                            
+                            <div class="form-group">
+                                <input type="email" pInputText [(ngModel)]="Subscription.email" placeholder="Email" name="email" class="form-control form-control-lg rounded-0 border-0" />
+                            </div>
+                            
+                            <div class="form-group">
+                                <p-autoComplete class="form-control form-control-lg rounded-0 border-0"
+                                    [(ngModel)]="Subscription.binomial" 
+                                    [suggestions]="FoundBinomials" 
+                                    (completeMethod)="FindBinomials($event)" 
+                                    field="name" 
+                                    name="binomial"
+                                    [size]="5"
+                                    [delay]="500"
+                                    placeholder="Conduttore o Concorrente" 
+                                    [minLength]="3">
+                                </p-autoComplete>
+                                
+                            </div>
+                            
+                            <div class="form-group">
+                                <span style="mar7gin-left:10px">Code: {{Subscription.binomial ? Subscription.binomial.code||Subscription.binomial : 'none'}}</span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <span style="mar7gin-left:10px">Name: {{Subscription.binomial ? Subscription.binomial.name||Subscription.binomial : 'none'}}</span>
+                            </div>
+                            
+                            
+
+                            <button type="submit" class="btn btn-primary btn-block btn-lg text-uppercase" (click)="SaveBinomial($event)">
+                                <i class="fa fa-trophy"></i> Iscriviti
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</section>

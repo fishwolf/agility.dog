@@ -1,0 +1,242 @@
+/*
+** style agility.dog
+** alexb74
+*/
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  color: #24324F;
+  padding-top: 94.36px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+}
+.main-content {flex: 1;}
+
+/* Utilities
+-------------------------------------------*/
+a {color:#24324F;}
+
+
+.btn-primary {
+    color: #24324F;
+    background-color: #FFD769;
+    border-color: #FFD769;
+    border-radius: 0;
+    font-weight: bold;
+}
+.btn-primary:hover {
+    color: #fff;
+    background-color: #00C851;
+    border-color: #00C851;
+}
+.btn-primary.focus, .btn-primary:focus {
+    color: #fff;
+    background-color: #00C851;
+    border-color: #00C851;
+    box-shadow: 0 0 0 0.2rem rgba(38,143,255,.5);
+}
+.btn-primary:not(:disabled):not(.disabled).active:focus, .btn-primary:not(:disabled):not(.disabled):active:focus, .show>.btn-primary.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.2rem rgba(38,143,255,.5);
+}
+
+
+.btn-outline-warning {
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+
+
+/* background color
+-------------------------------------------*/
+.bg-navbar {
+  background: #ffebb4; /* Old browsers */
+  background: -moz-linear-gradient(top,  #ffebb4 0%, #ffd769 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #ffebb4 0%,#ffd769 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #ffebb4 0%,#ffd769 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffebb4', endColorstr='#ffd769',GradientType=0 ); /* IE6-9 */
+}
+
+.bg-green{
+  /* background: linear-gradient(45deg, #a9ce00 12.5%, #bbd817 12.5%, #bbd817 37.5%, #a9ce00 37.5%, #a9ce00 62.5%, #bbd817 62.5%, #bbd817 87.5%, #a9ce00 87.5%); */
+  background: linear-gradient(45deg, #a9ce00 12.5%, #bbd817 12.5%, #a9ce00 37.5%, #bbd817 37.5%, #bbd817 62.5%, #a9ce00 62.5%, #a9ce00 87.5%, #bbd817 87.5%);
+  background-size: 100px 100px;
+  background-position: 50px 50px;
+}
+
+.bg-red{
+  background: linear-gradient(45deg, #a90329 12.5%, #6d0019 12.5%, #6d0019 37.5%, #a90329 37.5%, #a90329 62.5%, #6d0019 62.5%, #6d0019 87.5%, #a90329 87.5%);
+  background-size: 100px 100px;
+  background-position: 50px 50px;
+}
+
+.bg-blue{
+  background: linear-gradient(45deg, #7abcff 12.5%, #4096ee 12.5%, #4096ee 37.5%, #7abcff 37.5%, #7abcff 62.5%, #4096ee 62.5%, #4096ee 87.5%, #7abcff 87.5%);
+  background-size: 100px 100px;
+  background-position: 50px 50px;
+}
+
+
+/* Carousel home
+-------------------------------------------*/
+.carousel-inner .carousel-item{
+  height:570px;
+  background-size:cover;
+  background-position: center center;
+}
+
+
+#carouselExampleCaptions .carousel-caption {
+  position: absolute;
+  right: 15%;
+  bottom: 10%;
+  left: 15%;
+  z-index: 10;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #fff;
+  text-align: left;
+}
+
+
+
+
+
+/* title
+-------------------------------------------*/
+.title-head{
+  width: 30%;
+  margin: auto;
+  margin-top: 50px;
+  padding: 10px;
+  position: relative;
+  clear: both;
+  display: block;
+  z-index: 1;
+  text-align: center;
+  border-bottom: 2px solid #24324F;
+  border-top: 2px solid #24324F;
+  color: #24324F;
+}
+
+/* Box Gare
+----------------------------------------------------*/
+.wrap-result{
+  border: 3px solid #FFD769;
+  /*margin-bottom: 30px;*/
+  justify-content: flex-start;
+  height: 100%;
+  background: #ffffff; /* Old browsers */
+  background: -moz-linear-gradient(top,  #ffffff 0%, #f2f2f2 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #ffffff 0%,#f2f2f2 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #ffffff 0%,#f2f2f2 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f2f2f2',GradientType=0 ); /* IE6-9 */
+}
+
+.calendar a {transition: 0.3s;}
+.calendar a:hover,
+.calendar a:visited,
+.calendar a:focus{
+  color: #24324F;
+  padding: 0 8px;
+  border-left: 3px solid #ffd769;
+}
+
+/* Virtual Cup
+------------------------------------------*/
+.bg-virtualCup {
+  background-repeat: no-repeat;
+  background:linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3)), url(assets/images/foto1.jpg);
+  background-size:cover;
+}
+
+
+/* footer
+------------------------------------------*/
+.bg-footer{
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#24324f+0,070a10+100 */
+  background: #24324f; /* Old browsers */
+  background: -moz-linear-gradient(top,  #24324f 0%, #070a10 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #24324f 0%,#070a10 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #24324f 0%,#070a10 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#24324f', endColorstr='#070a10',GradientType=0 ); /* IE6-9 */
+}
+.footer{padding: 2rem 0px;}
+.footer ul>li>a {color:#fff;font-size: 12px;}
+.footer ul>li>a:hover {color:#fff;font-size: 12px;text-decoration: underline;}
+.footer p{color:#fff;font-size: 12px;}
+.footer__menu{padding: 0;	list-style-type: none;}
+.footer__menu li{display: inline-block;	}
+.footer__menu li a{padding: 0 12px 0 0;	}
+
+
+.img-crop {
+  object-fit: cover;
+  width: 300px;
+  min-height: 200px;  
+}
+
+/* PrimeNg Override Start */
+body .ui-widget {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.25rem;
+    text-decoration: none;
+    width: 100%;
+}
+body .ui-autocomplete .ui-autocomplete-input {
+    padding: 0;
+}
+body .ui-inputtext {    
+    border: 0px; 
+    color: #495057;
+}
+body .ui-corner-all {
+    border-radius: 0px;
+}
+/* PrimeNg Override End */
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+}
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+}
+@media (min-width: 481px) and (max-width: 767px) {
+}
+@media (min-width: 320px) and (max-width: 480px) {
+
+  .title-head{
+    width: 100%;
+  }
+  
+  .mb-3-mobile{
+	  margin-bottom:30px;
+  }
+
+  #carouselExampleCaptions .carousel-caption {
+    bottom: 10%;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    }
+
+  .carousel-inner .carousel-item {
+    min-height: 850px;
+    overflow: auto;
+}
+
+  .slogan .display-4{
+    font-size: 1.5rem;
+  }
+  
+  .bg-virtualCup .display-4{
+    font-size: 1.5rem;
+  }
+  
+  
+  .img-crop {
+    margin-top: 30px;
+  }
+
+}

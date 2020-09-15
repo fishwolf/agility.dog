@@ -1,0 +1,133 @@
+<!-- ====================== section next week ====================== -->
+
+<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+
+    <ol class="carousel-indicators">
+        <li data-target="#carouselExampleCaptions" 
+            *ngFor="let nextevent of NextEvents; let Ind = index"
+            [ngClass]="{'active': Ind == 0}" 
+            attr.data-slide-to="{{Ind}}">
+        </li>
+    </ol>
+
+    <div class="carousel-inner slogan">
+
+        <div class="carousel-item" 
+            [ngClass]="{'active': Ind == 0,
+            'bg-blue': ((Ind + 1) % 3) == 0,
+            'bg-green': ((Ind + 1) % 3) == 1,
+            'bg-red': ((Ind + 1) % 3) == 2}" 
+            *ngFor="let nextevent of NextEvents; let Ind = index">
+            <div class="carousel-caption">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-sm-2 ">
+                            <img src="assets/images/enci.png"   class="img-thumibnail img-fluid" alt="..." *ngIf="nextevent.tipo==1">
+                            <img src="assets/images/csen.png"   class="img-thumibnail img-fluid" alt="..." *ngIf="nextevent.tipo==2">
+                            <img src="assets/images/fisc.png"   class="img-thumibnail img-fluid" alt="..." *ngIf="nextevent.tipo==5">
+                            <img src="assets/images/fidasc.png" class="img-thumibnail img-fluid" alt="..." *ngIf="nextevent.tipo==4">
+                        </div>
+                        
+                        <div class="col-sm-6 ">
+                            <h5 class="display-4 font-weight-bold">
+                                {{nextevent.struttura}}
+                            </h5>
+                            <p>
+                                Località: {{nextevent.citta}} {{nextevent.provincia}} <br />
+                                Data: {{nextevent.date}} <br />
+                                Dettaglio: {{nextevent.nome}}
+                            </p>
+                            <button type="button" class="btn btn-outline-warning">
+                                Scopri di più
+                            </button>
+                        </div>
+                        <div class="col-sm-4">
+                            <img src="assets/images/locandina.jpg" class="img-thumbnail img-crop" alt="..." *ngIf="nextevent.locandine==0">
+                            <img src="{{nextevent.locandina}}"     class="img-thumbnail img-crop" alt="..." *ngIf="nextevent.locandine>0">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+                
+    </div>
+
+    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
+<!-- ====================== section risultati ====================== -->
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="title-head">
+                <h3 class="mb-0">
+                    Ultimi risultati
+                </h3>
+            </div>
+        </div>
+    </div>
+</div>
+              
+<div class="container mt-5">
+
+    <div class="row mb-4">
+
+        <div *ngFor="let lastevent of LastEvents" class="col-sm-6 mb-4">    
+            <div class="wrap-result">
+                <div class="card border-0 rounded-0">
+                    <div class="card-header border-0 rounded-0">
+                        <p class="d-inline mb-0">Località: <span class="font-weight-bold">{{lastevent.citta}}</span></p>
+                        <p class="d-inline mb-0 float-right">Risultati: 
+                            <i class="fa" 
+                               [ngClass]="{'fa-ban text-danger':           lastevent.risultati == 0,
+                                           'fa-check-circle text-success': lastevent.risultati == 1}">                          
+                            </i>
+                        </p>
+                    </div>
+                    
+                    <div class="card-body">
+                        <div class="row align-items-center justify-content-center">
+                            <div class="col-sm-3">
+                                <img class="img-fluid mb-3-mobile" src="assets/images/enci.png"   alt="circuito_enci"   *ngIf="lastevent.tipo==1">
+                                <img class="img-fluid mb-3-mobile" src="assets/images/csen.png"   alt="circuito_csen"   *ngIf="lastevent.tipo==2">
+                                <img class="img-fluid mb-3-mobile" src="assets/images/fisc.png"   alt="circuito_fisc"   *ngIf="lastevent.tipo==5">
+                                <img class="img-fluid mb-3-mobile" src="assets/images/fidasc.png" alt="circuito_fidasc" *ngIf="lastevent.tipo==4">
+                            </div>
+                            <div class="col-sm-9 calendar">
+
+                                <div class="row" *ngFor="let data of lastevent.date">
+                                    <div class="col ">
+                                        <a href="">
+                                            <p class="d-inline mb-0"><span class="font-weight-bold">{{data.WW}}:</span></p>
+                                            <p class="d-inline mb-0 float-right">{{data.dd}} {{data.MM}} {{data.yyyy}}&nbsp;<i class="fa fa-calendar"></i></p>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card-footer border-0 rounded-0" height>
+                        <p class="d-inline mb-0">Organizzatore: <span class="font-weight-bold">{{lastevent.struttura}}</span></p>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ========================= section virtual cup ============================== -->
+
+<app-virtualcup></app-virtualcup>
